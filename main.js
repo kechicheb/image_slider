@@ -2,11 +2,13 @@ let images = document.querySelectorAll(".slider-container img");
 let index = 0;
 let prev = document.getElementById("prev");
 let next = document.getElementById("next");
+let slideNumber = document.getElementById("slide-number");
+
 if (index == 0) {
   prev.classList.add("disabled");
 }
 prev.onclick = function (e) {
-  if (index  == 0) {
+  if (index == 0) {
     prev.classList.add("disabled");
     e.preventDefault();
   } else {
@@ -20,6 +22,7 @@ prev.onclick = function (e) {
       prev.classList.add("disabled");
     }
   }
+  slideNbr();
 };
 next.onclick = function (e) {
   if (index + 1 == images.length) {
@@ -36,4 +39,10 @@ next.onclick = function (e) {
       next.classList.add("disabled");
     }
   }
+  slideNbr();
 };
+
+function slideNbr() {
+    slideNumber.innerText = `Slide #${index + 1} of ${images.length}`;
+}
+slideNbr();
