@@ -18,12 +18,12 @@ body {
   opacity: 0;
   max-width: 100%;
   max-width: 100%;
-  transition: opacity 1s;
+  transition: opacity .7s;
   z-index: 1;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  -o-transition: opacity 1s;
+  -webkit-transition: opacity .7s;
+  -moz-transition: opacity .7s;
+  -ms-transition: opacity .7s;
+  -o-transition: opacity .7s;
 }
 .slider-container img.active {
   opacity: 1;
@@ -66,4 +66,29 @@ body {
 .slider-controls .next.disabled {
   background-color: rgba(0, 150, 136, 0.5);
   cursor: no-drop;
+}
+.slider-controls .indicators {
+  width: 60%;
+  float: left;
+}
+.slider-controls .indicators ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+.slider-controls .indicators ul li {
+  display: inline-block;
+  background-color: #F6F6F6;
+  color: #333;
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  margin: 0 2px;
+  line-height: 28px;
+  cursor: pointer;
+}
+.slider-controls .indicators ul li.active {
+  background-color: #009688;
+  color: #FFF;
 }
